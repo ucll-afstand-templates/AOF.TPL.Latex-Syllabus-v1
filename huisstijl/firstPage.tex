@@ -1,0 +1,23 @@
+
+
+\newcommand{\firstPage}[5]{
+\thispagestyle{empty} % Suppress page numbering
+\NoBgThispage
+
+\ThisULCornerWallPaper{1}{huisstijl/voorpagina.jpg} % Add the background image, the first argument is the scaling - adjust this as necessary so the image fits the entire page
+
+\begin{tikzpicture}[remember picture,overlay]
+\node [rectangle, rounded corners, fill=white, opacity=0.75, anchor=south west, minimum width=10cm, minimum height=19cm] (box) at (5.5,-25) (box){}; % White rectangle - "minimum width/height" adjust the width and height of the box; "(-0.5,-10)" adjusts the position on the page
+\node[anchor=west, xshift=0cm, yshift=3cm, text width=10cm, font=\sffamily\scriptsize\huge, align=right] at (box.west){{#1}}; % "Text width" adjusts the wrapping width, "xshift/yshift" adjust the position relative to the white rectangle
+\node[anchor=west, xshift=0cm, yshift=1.5cm, text width=10cm, font=\sffamily\bfseries\scshape\large, align=right] at (box.west){{#2}}; % "Text width" adjusts the wrapping width, "xshift/yshift" adjust the position relative to the white rectangle
+\node[anchor=west, xshift=0cm, yshift=-3cm, text width=10cm, font=\sffamily\bfseries\scshape\large, align=right] at (box.west){{#3}}; % "Text width" adjusts the wrapping width, "xshift/yshift" adjust the position relative to the white rectangle
+\node[anchor=west, xshift=0cm, yshift=-7.5cm, text width=10cm, font=\sffamily\normalsize, align=right] at (box.west){{#4}}; % "Text width" adjusts the wrapping width, "xshift/yshift" adjust the position relative to the white rectangle
+\node[anchor=west, xshift=0cm, yshift=-6.8cm, text width=10cm, font=\sffamily\normalsize, align=right] at (box.west){{#5}}; % "Text width" adjusts the wrapping width, "xshift/yshift" adjust the position relative to the white rectangle
+
+\end{tikzpicture}
+\newpage % Make sure the following content is on a new page
+\color{black}
+\tiny
+\sloppy
+\setlength{\parindent}{0pt}
+}

@@ -1,0 +1,24 @@
+\definecolor{platinum}{rgb}{0.93, 0.93, 0.93}
+
+\newcommand{\icon}[2]{%
+\noindent%
+\setlength\fboxsep{10pt}%
+\noindent%
+\begin{minipage}{0.1\textwidth}% adapt widths of minipages to your needs
+\includegraphics[width=\linewidth]{{#1}}%
+\end{minipage}%
+\hfill%
+\fcolorbox{white}{platinum}{\begin{minipage}{\dimexpr0.85\textwidth-8\fboxrule- 2\fboxsep\relax}%
+{#2}\end{minipage}}\\  \vskip.4\baselineskip}
+
+\newcommand{\bijkomendMateriaal}[1]{\icon{huisstijl/images/bijkomend-materiaal.pdf}{#1}}
+\newcommand{\bijkomendeInfo}[1]{\icon{huisstijl/images/bijkomende-info}{#1}}
+\newcommand{\doelstelling}[1]{\icon{huisstijl/images/doelstelling.pdf}{#1}}
+\newcommand{\oefening}[1]{\icon{huisstijl/images/oefening.pdf}{#1}}
+\newcommand{\tip}[1]{\icon{huisstijl/images/tip.pdf}{#1}}
+\newcommand{\verdieping}[1]{\icon{huisstijl/images/verdieping.pdf}{#1}}
+\newcommand{\vraag}[1]{\icon{huisstijl/images/vraag.pdf}{#1}}
+\newcommand{\waarschuwing}[1]{\icon{huisstijl/images/waarschuwing.pdf}{#1}}
+
+
+
