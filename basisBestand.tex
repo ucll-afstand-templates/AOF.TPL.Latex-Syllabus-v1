@@ -1,9 +1,17 @@
-\documentclass[11pt,a4paper,oldfontcommands]{memoir}
+\documentclass[11pt,a4paper,oldfontcommands,dutch]{memoir}
 %https://fr.overleaf.com/latex/templates/basic-thesis-template-using-the-memoir-class/frcgcvwxkbwh
+
+% zet onderstaand lijn in commentaar en verwijder "dutch" uit de opties in lijn 1 als je een engelstalige cursus wil
+% als je in het nederlands werkt: gebruik voor de aanhalingstekens twee keer enkel aanhalingsteken: ``Welkom'' (ook op het einde)
+\usepackage[dutch]{babel}
+
 
 \input{huisstijl/settings}
 \input{huisstijl/icons-settings}
 \input{huisstijl/firstPage}
+
+% beperk het aantal hoofdstukken dat je compileert
+%\includeonly{icons}
 
 
 \begin{document}
@@ -16,8 +24,8 @@
 
 \newpage
 
-\input{icons}
+\include{icons}
 
-\input{Introduction}
+\include{introduction}
 
 \end{document}
