@@ -1,6 +1,7 @@
 % !TEX root = basisbestand.tex
-% maakt het mogelijk op ook te compileren vanuit een deelbestand\chapter{Huisstijl}
+% maakt het mogelijk op ook te compileren vanuit een deelbestand
 
+\chapter{Huisstijl}
 \section{Iconen}
 
 \bijkomendMateriaal{Bijkomend materiaal of referentie, gebruik \\ \code{\textbackslash bijkomendMateriaal\{text-to-display\}}}
@@ -15,14 +16,14 @@
 \section{Code in tekst}
 Gebruik \code{\textbackslash code\{int a=3\}} om code in de tekst te tonen  (bijvoorbeeld \code{int a = 3}).
 
-Voor langere stukken gebruik je \code{lstlisting}.
+Voor langere stukken gebruik je \code{lstlisting}. Je kan verwijzen naar een bepaalde lijn met een label, bijvoorbeeld ``zie code in lijn \ref{line:userRepo}''.  Bekijk de broncode om te zien hoe je het moet doen. Code tussen de symbolen \code{£} wordt niet als code gezien, maar als \LaTeX-code. Je kan het gebruikte symbool aanpassen in het bestand huisstijl/settings, lijn 96.
 \begin{lstlisting}[caption={My label}, label={lst:label}]
 
 public class UserService { 
 
 // bewaar voorlopig alle gebruikers in een lijst. Later zullen we connecteren met een databank 
 
-    private List<User> userRepo = new ArrayList<>(); 
+    private List<User> userRepo = new ArrayList<>(); £\label{line:userRepo}£
  \end{lstlisting}
 
 
